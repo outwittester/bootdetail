@@ -21,7 +21,10 @@ public class DemoApplication {
 		return new User("Dan", "Vega");
 	}
 
+
+
 	public static void main(String[] args) {
+
 		ApplicationContext ctx = SpringApplication.run(DemoApplication.class, args);
 		String[] beanNames = ctx.getBeanDefinitionNames();
 		Arrays.sort(beanNames);
@@ -31,5 +34,12 @@ public class DemoApplication {
 		}
 
 		System.out.println(ctx.getBean("user").toString());
+		MyAppConfig config = (MyAppConfig) ctx.getBean("myAppConfig");
+		System.out.println(config.toString());
+
+		System.out.println(ctx.getBean("datasource").toString());
+		System.out.println(ctx.getBean("user").toString());
+		System.out.println(ctx.getBean("myAppConfig"));
+		System.out.println(ctx.getBean("dataSourceConfig"));
 	}
 }
