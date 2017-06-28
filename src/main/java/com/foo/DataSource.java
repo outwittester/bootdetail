@@ -6,12 +6,10 @@ package com.foo;
 
 
 public class DataSource {
-
     private String server;
     private int port;
 
     public DataSource() {
-        System.out.println();
     }
 
     public DataSource(String server, int port) {
