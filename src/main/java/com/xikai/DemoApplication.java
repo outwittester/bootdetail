@@ -17,6 +17,14 @@ public class DemoApplication {
 //		return new User("Dan", "Vega");
 //	}
 
+//	@Bean
+//	public MessageSource messageSource() {
+//		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+//		messageSource.setBasename("classpath:messages");
+//		messageSource.setDefaultEncoding("UTF-8");
+//		return messageSource;
+//	}
+
 	public static void main(String[] args) {
 
 		ApplicationContext ctx = SpringApplication.run(DemoApplication.class, args);
@@ -36,5 +44,6 @@ public class DemoApplication {
 //		System.out.println(ctx.getBean("myAppConfig"));
 //		System.out.println(ctx.getBean("dataSourceConfig"));
 //		System.out.println(ctx.getBean("user"));
+		System.out.println(ctx.getBean("messageSource"));
 	}
 }

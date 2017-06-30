@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeControllerTwo {
     @RequestMapping("/")
     public String leaf() {
-        return "views/list";
+        return "/views/list";
     }
 }
